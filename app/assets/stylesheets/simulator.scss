@@ -1,0 +1,202 @@
+// Place all the styles related to the simulator controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// @import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Fredoka+One);
+@mixin drop-shadow($x: 2px, $y: 2px, $radius: 1px, $transparency: rgba(0, 0, 0, 0.50)){
+  -webkit-filter: drop-shadow(0px 10px 0px rgba($x, $y, $radius, $transparency));
+  filter: url(#drop-shadow);
+  // -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+  // filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radisu: $radius;
+  border-radius: $radius;
+}
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+@mixin scale($percent){
+  -webkit-transform: scale($percent);
+  -moz-transform: scale($percent);
+  -ms-transform: scale($percent);
+  -o-transform: scale($percent);
+  transform: scale($percent);
+}
+@mixin rotateScale($deg, $percent){
+  -webkit-transform: rotate($deg) scale($percent);
+  -moz-transform: rotate($deg) scale($percent);
+  -ms-transform: rotate($deg) scale($percent);
+  -o-transform: rotate($deg) scale($percent);
+  transform: rotate($deg) scale($percent);
+}
+@mixin box-shadow($x, $y, $radius, $color, $x2: 0, $y2: 0, $radius2: 0, $color2: rgba(0, 0, 0, 0)){
+  -webkit-box-shadow: $x $y $radius $color, $x2 $y2 $radius2 $color2;
+  -moz-box-shadow: $x $y $radius $color, $x2 $y2 $radius2 $color2;
+  box-shadow: $x $y $radius $color, $x2 $y2 $radius2 $color2;
+}
+@mixin transition($property, $time: .2s, $transition: ease-in-out){
+  -webkit-transition: $property $time $transition;
+  -moz-transition: $property $time $transition;
+  -o-transition: $property $time $transition;
+  transition: $property $time $transition;
+}
+@mixin transform($x: 0px, $y: 4px){
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
+html{
+  font-family: "Fredoka One";
+  background: #b8e4ff;
+  -moz-background-size: 80px 80px;
+  -webkit-background-size: 80px 80px;
+  -o-background-size: 80px 80px;
+  background-size: 80px 80px;
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(25%, rgba(255, 255, 255, 0.1)), color-stop(25%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.1)), color-stop(75%, rgba(255, 255, 255, 0.1)), color-stop(75%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -moz-linear-gradient(left top, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(left top, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0))
+
+}
+
+h1{
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px black;
+ -webkit-text-stroke: 1px black;
+}
+
+.image-stack{
+  margin: auto;
+  height: 638px;
+  // height: 482px;
+  width: 960px;
+  position: relative;
+
+  .main-sam{
+    @include border-radius(10px);
+  }
+
+  #sam{
+    z-index: -1;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  #sam-overlap{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .temp{
+    position: absolute;
+  }
+
+  #temp-oreo{
+    bottom: 50px;
+    left: 250px;
+    @include rotateScale(-45deg, 0.5);
+  }
+
+  #temp-sushi{
+    bottom: 40px;
+    right: 390px;
+    @include rotateScale(0deg, 0.75);
+  }
+
+  #temp-shumai{
+    bottom: 20px;
+    right: 20px;
+    @include rotateScale(-45deg, 0.5);
+  }
+
+  #temp-secret{
+    bottom: 20px;
+    right: 200px;
+    @include rotateScale(-30deg, 0.4);
+  }
+}
+
+table{
+  margin: auto;
+  text-align: center;
+
+  th{
+    font-size: 30px;
+    color: white;
+    text-shadow: 3px 3px black;
+   -webkit-text-stroke: 1px black;
+  }
+
+  td{
+    font-size: 20px;
+  }
+}
+
+.button-container{
+  margin: 30px;
+  width: 150px;
+  height: 100px;
+  @include border-radius(10px);
+  position: relative;
+  @include box-shadow(0px, 10px, 0, rgb(180, 180, 180), 0px, 15px, 20px, rgba(0, 0, 0, 0.35));
+
+  .food-button{
+    height: auto;
+    margin: auto;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include border-radius(10px);
+    outline: none;
+    @include transition(transform, .1s);
+  }
+
+  .food-button:active{
+    @include transform();
+  }
+}
+
+.secret-container{
+  position:fixed;
+  bottom: 30px;
+  right: 30px;
+  @include border-radius(4px);
+  @include box-shadow(0px, 5px, 0, rgb(164, 0, 0), 0px, 0px, 0px, rgba(0, 0, 0, 0.35));
+
+  #secret{
+    // position: fixed;
+    // bottom: 30px;
+    // right: 30px;
+    outline: none;
+    background-color: red;
+    border-style: none;
+    height: 30px;
+    width: 30px;
+    color: white;
+    font-weight: bold;
+    @include border-radius(4px);
+    @include transition(transform, .1s);
+  }
+
+  #secret:active{
+    @include transform(0px, 2px);
+  }
+
+}

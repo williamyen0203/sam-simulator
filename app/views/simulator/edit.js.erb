@@ -1,0 +1,8 @@
+// $(".number").html(<%= Simulator.find(params[:id]).amount %>);
+
+var i = 1;
+<% Simulator.all.each do |food| %>
+  var selector = ".number:nth-child(" + i + ")";
+  $(selector).html(<%= food.amount %>);
+  i++;
+<% end %>

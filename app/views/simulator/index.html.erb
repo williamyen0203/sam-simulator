@@ -1,0 +1,35 @@
+<h1>Sam Simulator v1.0</h1>
+
+<div class="image-stack">
+  <%= image_tag "Sam.png", class: "main-sam", id: "sam"%>
+  <%= image_tag "Sam overlap.png", class: "main-sam", id: "sam-overlap" %>
+</div>
+
+<div class="counter">
+  <table>
+    <tr class="button-row">
+      <% @foods.each do |f| %>
+      <td>
+        <div class="button-container">
+          <%= link_to image_tag(f.food), edit_simulator_path(f.id), :remote => true, class: "food-button", id: f.food %>
+        </div>
+      </td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @foods.each do |f| %>
+      <th scope="col"><%= f.food.capitalize %></th>
+      <% end %>
+    </tr>
+    <tr class="counter-row">
+      <% @foods.each do |f| %>
+      <% counter_id = f.food + "-counter" %>
+      <td class="number"><%= f.amount %></td>
+      <% end %>
+    </tr>
+  </table>
+</div>
+
+<div class="secret-container">
+  <button id="secret">?</button>
+</div>
