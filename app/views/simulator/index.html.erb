@@ -24,7 +24,7 @@
     <tr class="counter-row">
       <% @foods.each do |f| %>
       <% counter_id = f.food + "-counter" %>
-      <td class="number"><%= f.amount %></td>
+      <td id=<%= counter_id %> class="number"><%= f.amount %></td>
       <% end %>
     </tr>
   </table>

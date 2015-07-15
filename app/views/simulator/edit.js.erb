@@ -1,8 +1,11 @@
-// $(".number").html(<%= Simulator.find(params[:id]).amount %>);
+// generic solution
+// var i = 1;
+// <% Simulator.all.each do |food| %>
+//   var selector = ".number:nth-child(" + i + ")";
+//   $(selector).html(<%= food.amount %>);
+//   i++;
+// <% end %>
 
-var i = 1;
-<% Simulator.all.each do |food| %>
-  var selector = ".number:nth-child(" + i + ")";
-  $(selector).html(<%= food.amount %>);
-  i++;
-<% end %>
+$(#oreo-counter).html(<%= Simulator.all[0].amount %>);
+$(#sushi-counter).html(<%= Simulator.all[1].amount %>);
+$(#shumai-counter).html(<%= Simulator.all[2].amount %>);
