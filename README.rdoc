@@ -1,1 +1,3 @@
 == Sam Simulator v1.0
+
+http://sam-simulator.herokuapp.com/
