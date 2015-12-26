@@ -1,3 +1,5 @@
-== Sam Simulator v1.0
+== Sam Simulator v1.1: Christmas Update
+
+Happy Birthday Sam :^)
 
 http://sam-simulator.herokuapp.com/
