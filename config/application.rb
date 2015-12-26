@@ -21,10 +21,10 @@ module SamSimulator
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.assets.precompile += [
-      'hella-tite.css'
-    ]
+    # config.assets.precompile += [
+    #   'hella-tite.css'
+    # ]
     config.active_record.raise_in_transactional_callbacks = true
-    config.assets.compile = false
+    config.assets.initialize_on_precompile=false
   end
 end
