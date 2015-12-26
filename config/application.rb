@@ -21,8 +21,8 @@ module SamSimulator
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.assets.precompile += %w( oreo )
+    # config.assets.precompile += %w( oreo )
     config.active_record.raise_in_transactional_callbacks = true
-    config.assets.initialize_on_precompile = false
+    # config.assets.initialize_on_precompile = false
   end
 end
