@@ -25,5 +25,7 @@ module SamSimulator
       'hella-tite.css'
     ]
     config.active_record.raise_in_transactional_callbacks = true
+    config.assets.compile = true
+    config.assets.precompile =  ['*.js', '*.css', '*.css.erb'] 
   end
 end
