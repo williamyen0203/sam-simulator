@@ -11,7 +11,6 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'jbuilder',             '~> 2.0'
 gem 'sdoc',                 '~> 0.4.0', group: :doc
-gem 'heroku'
 
 group :development, :test do
   gem 'sqlite3'
@@ -25,4 +24,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'thin'
 end
