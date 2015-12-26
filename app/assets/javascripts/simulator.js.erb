@@ -5,7 +5,6 @@
 $(document).ready(function(){
  $("#oreo").click(function(){
    $("#special-overlap").fadeOut("fast");
-   // $('<img id="temp-oreo" class="temp" src="/assets/oreo.png">').appendTo('.image-stack').animate({
    $('<%= image_tag("oreo.png", class: "temp", id: "temp-oreo") %>').appendTo('.image-stack').animate({
      left: "575px",
      bottom: "500px"
@@ -15,8 +14,7 @@ $(document).ready(function(){
  })
  $("#sushi").click(function(){
    $("#special-overlap").fadeOut("fast");
-   // $('<img id="temp-sushi" class="temp" src="/assets/sushi-projectile.png">').appendTo('.image-stack').animate({
-   $('<%= image_tag("sushi.png", class: "temp", id: "temp-sushi") %>').appendTo('.image-stack').animate({
+   $('<%= image_tag("sushi-projectile.png", class: "temp", id: "temp-sushi") %>').appendTo('.image-stack').animate({
      bottom: "500px"
    }, 1000, "linear", function(){
      $(this).remove();
@@ -24,7 +22,6 @@ $(document).ready(function(){
  })
  $("#shumai").click(function(){
    $("#special-overlap").fadeOut("fast");
-   // $('<img id="temp-shumai" class="temp" src="/assets/shumai.png">').appendTo('.image-stack').animate({
    $('<%= image_tag("shumai.png", class: "temp", id: "temp-shumai") %>').appendTo('.image-stack').animate({
      right: "490px",
      bottom: "500px"
@@ -34,7 +31,6 @@ $(document).ready(function(){
  })
  $("#cake").click(function(){
    $("#special-overlap").fadeIn("fast");
-  //  $('<img id="temp-cake" class="temp" src="/assets/cake.png">').appendTo('.image-stack').animate({
    $('<%= image_tag("cake.png", class: "temp", id: "temp-cake") %>').appendTo('.image-stack').animate({
      left: "650px",
      bottom: "500px"
@@ -43,7 +39,6 @@ $(document).ready(function(){
    });
  })
  $("#secret").click(function(){
-   // $('<img id="temp-secret" class="temp" src="/assets/secret.png">').appendTo('.image-stack').animate({
    $('<%= image_tag("secret.png", class: "temp", id: "temp-secret") %>').appendTo('.image-stack').animate({
      right: "470px",
      bottom: "500px"
