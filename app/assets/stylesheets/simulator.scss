@@ -79,7 +79,6 @@ h1{
 .image-stack{
   margin: auto;
   height: 638px;
-  // height: 482px;
   width: 960px;
   position: relative;
 
@@ -99,6 +98,14 @@ h1{
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  #special-overlap{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
   }
 
   .temp{
@@ -121,6 +128,12 @@ h1{
     bottom: 20px;
     right: 20px;
     @include rotateScale(-45deg, 0.5);
+  }
+
+  #temp-cake{
+    bottom: 0px;
+    left: 0px;
+    @include rotateScale(-60deg, 0.5);
   }
 
   #temp-secret{
@@ -198,5 +211,4 @@ table{
   #secret:active{
     @include transform(0px, 2px);
   }
-
 }
