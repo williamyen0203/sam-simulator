@@ -39,7 +39,8 @@ $(document).ready(function(){
     });
   })
   $("#secret").click(function(){
-    $('<img id="temp-secret" class="temp" src="/assets/secret.png">').appendTo('.image-stack').animate({
+    // $('<img id="temp-secret" class="temp" src="/assets/secret.png">').appendTo('.image-stack').animate({
+    $(<%= link_to image_tag("secret.png"), edit_simulator_path(f.id), class: "temp", id: "temp-secret" %>).appendTo('.image-stack').animate({
       right: "470px",
       bottom: "500px"
     }, 1000, "linear", function(){

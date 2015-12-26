@@ -12,7 +12,6 @@
       <% @foods.each do |f| %>
       <td>
         <div class="button-container">
-          <%= link_to image_tag("oreo.png"), edit_simulator_path(f.id)%>
           <%= link_to image_tag(f.food + ".png"), edit_simulator_path(f.id), :remote => true, class: "food-button", id: f.food %>
         </div>
       </td>
