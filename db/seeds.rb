@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Simulator.create(food: "oreo", amount: 46208)
-Simulator.create(food: "sushi", amount: 1759)
-Simulator.create(food: "shumai", amount: 1753)
-Simulator.create(food: "cake", amount: 0);
+Simulator.create(food: "oreo", amount: 46585)
+Simulator.create(food: "sushi", amount: 2105)
+Simulator.create(food: "shumai", amount: 2095)
+Simulator.create(food: "cake", amount: 745);

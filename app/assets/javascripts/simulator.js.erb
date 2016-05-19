@@ -5,6 +5,7 @@
 $(document).ready(function(){
  $("#oreo").click(function(){
    $("#special-overlap").fadeOut("fast");
+   $("#xiang-overlap").fadeOut("fast");
    $('<%= image_tag("oreo.png", class: "temp", id: "temp-oreo") %>').appendTo('.image-stack').animate({
      left: "575px",
      bottom: "500px"
@@ -14,6 +15,7 @@ $(document).ready(function(){
  })
  $("#sushi").click(function(){
    $("#special-overlap").fadeOut("fast");
+   $("#xiang-overlap").fadeOut("fast");
    $('<%= image_tag("sushi-projectile.png", class: "temp", id: "temp-sushi") %>').appendTo('.image-stack').animate({
      bottom: "500px"
    }, 1000, "linear", function(){
@@ -22,6 +24,7 @@ $(document).ready(function(){
  })
  $("#shumai").click(function(){
    $("#special-overlap").fadeOut("fast");
+   $("#xiang-overlap").fadeOut("fast");
    $('<%= image_tag("shumai.png", class: "temp", id: "temp-shumai") %>').appendTo('.image-stack').animate({
      right: "490px",
      bottom: "500px"
@@ -30,7 +33,14 @@ $(document).ready(function(){
    });
  })
  $("#cake").click(function(){
-   $("#special-overlap").fadeIn("fast");
+   var today = new Date();
+   var month = today.getMonth() + 1;
+   var date = today.getDate();
+   if (month == 12 && date == 25) {
+     $("#special-overlap").fadeIn("fast");
+   } else if (month == 5 && date == 19) {
+     $("#xiang-overlap").fadeIn("fast");
+   }
    $('<%= image_tag("cake.png", class: "temp", id: "temp-cake") %>').appendTo('.image-stack').animate({
      left: "650px",
      bottom: "500px"
